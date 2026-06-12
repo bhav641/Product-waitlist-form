@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Waitlist Form</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:350px;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    color:#333;
+}
+
+img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+#message{
+    text-align:center;
+    color:green;
+    margin-top:10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Product Waitlist</h2>
+
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600"
+         alt="Product">
+
+    <form id="waitlistForm">
+
+        <input type="text" id="name" placeholder="Enter Name" required>
+
+        <input type="email" id="email" placeholder="Enter Email" required>
+
+        <input type="tel" id="phone" placeholder="Enter Mobile Number" required>
+
+        <button type="submit">Join Waitlist</button>
+
+    </form>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+document.getElementById("waitlistForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    document.getElementById("message").innerHTML =
+    "✅ Successfully Joined the Product Waitlist!";
+});
+</script>
+
+</body>
+</html>
